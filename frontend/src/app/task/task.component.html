@@ -1,0 +1,51 @@
+<div class="allDocument">
+    <button class="btn-gotoUser" (click)="gotoUser()">Goto User</button>
+        <h1>Create Task</h1>
+    <div>
+        <div class="main-container">
+            <div class="input-container">
+                <input [(ngModel)]="task.title" type="text" placeholder="task title">
+            </div>
+            <div class="input-container">
+                <select name="" id="" [(ngModel)]="task.userId" class="selectOption">
+                    <option 
+                    *ngFor="let user of users"
+                     [value]="user._id">{{ user.name }}</option>
+                </select>
+            </div>
+            <div>
+                <button class="btn-save" (click)="saveTask()">Save Task</button>
+            </div>   
+        </div>
+        </div>
+        
+    <h1>Tasks List</h1>
+    <div class="input-container">
+        <select 
+        name="" 
+        id="" 
+        [(ngModel)]="selectedUserId"
+        class="selectOption"
+        (change)="onChange()" >
+            <option *ngFor="let user of users"
+             [value]="user._id">{{ user.name }}</option>
+        </select>        
+    </div>
+    <div>
+        <table>
+            <tr *ngIf="tasks.length>0">
+                <th>Task</th>
+                <th>UserId</th>
+                <th>Operation</th>
+            </tr>
+            <tr *ngFor="let task of tasks"
+            style="cursor: pointer;">
+                <td (click)="selectTask(task)">{{ task.title }}</td>
+                <td (click)="selectTask(task)">{{ task.userId.name }}</td>
+                <td>
+                    <button class="btn-danger" (click)="deleteTask(task?._id)">Delete</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

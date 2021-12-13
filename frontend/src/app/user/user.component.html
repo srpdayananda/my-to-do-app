@@ -1,0 +1,36 @@
+<div class="allDocument">
+    <div>
+    <button class="btn-gotoTask" (click)="gotoTask()">Goto Task</button>
+    </div>    
+    <h1>User List</h1>
+    <div class="show-details">
+        <table>
+            <tr *ngIf="users.length > 0">
+                <th>Name</th>
+                <th>Email</th>
+                <th>Operation</th>
+            </tr>
+            <tr *ngFor="let user of users"
+             
+             style="cursor: pointer;" >
+                <td (click)="selectUser(user)">{{ user.name }}</td>
+                <td (click)="selectUser(user)">{{ user.email }}</td>
+                <td>
+                    <button class="btn-danger" (click)="deleteUser(user?._id)">Delete</button>
+                </td>
+            </tr>                
+        </table>
+    </div>
+    <h2>Add User</h2>
+    <div class="main-container">
+        <div class="input-container">
+            <label>Name</label>
+            <input [(ngModel)]="user.name" type="text" placeholder="name">
+        </div>
+        <div class="input-container">
+            <label>Email</label>
+            <input [(ngModel)]="user.email" type="text" placeholder="email">
+        </div>
+        <button class="btn-save" (click)="saveUser()">Save User</button>
+    </div>
+</div>

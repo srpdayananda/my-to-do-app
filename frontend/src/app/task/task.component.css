@@ -1,0 +1,57 @@
+.allDocument {
+  height: 100vh;
+  padding: 10px 20px;
+  background-color: aqua;
+}
+.btn-gotoUser {
+  background-color: orange;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 6px 10px;
+  outline: none;
+}
+.btn-save {
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 4px 8px;
+  border: none;
+  outline: none;
+}
+.btn-danger {
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 4px 10px;
+  border: none;
+  outline: none;
+}
+.main-container {
+  text-align: right;
+  width: 50%;
+}
+.input-container {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+input {
+  font-size: 1rem;
+  padding: 4px 8px;
+  background-color: white;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+}
+.selectOption{
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    background-color: white;
+    border-radius: 16px;
+    padding: 4px 10px;
+}
